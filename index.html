@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buddy — prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="buddy" role="img" aria-label="Buddy">
+      <!-- Simple stylized purple character (generic) -->
+      <svg viewBox="0 0 200 200" id="buddy-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="g1" cx="30%" cy="30%">
+            <stop offset="0%" stop-color="#aa5bed" />
+            <stop offset="100%" stop-color="#7a2fb5" />
+          </radialGradient>
+        </defs>
+        <ellipse cx="100" cy="110" rx="70" ry="60" fill="url(#g1)" />
+        <circle cx="80" cy="85" r="10" fill="#fff" />
+        <circle cx="120" cy="85" r="10" fill="#fff" />
+        <circle cx="82" cy="87" r="4" fill="#000" />
+        <circle cx="122" cy="87" r="4" fill="#000" />
+        <path id="mouth" d="M70 115 q30 20 60 0" stroke="#43005b" stroke-width="4" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <div id="controls">
+      <div id="bubble" class="hidden">Hi! Ask me something.</div>
+
+      <div id="chat">
+        <input id="msg" placeholder="Say hi..." />
+        <button id="send">Send</button>
+        <label><input id="autoplay" type="checkbox" checked /> Speak</label>
+      </div>
+
+      <div id="actions">
+        <button id="wave">Wave</button>
+        <button id="dance">Dance</button>
+        <button id="reset">Reset</button>
+      </div>
+
+      <div id="log"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
